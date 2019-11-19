@@ -1,15 +1,8 @@
-npm start &
+source /benchmarking-tool/start-web-server.sh
 
-echo 'Waiting for webserver to start...'
-# Wait until the server is up and running
-while [ `curl -sL -w "%{http_code}\\n" "http://localhost:8080/" -o /dev/null` -eq "000" ]
-do
-	:
-done
-echo 'Yaah! webserver started'
-
-npm run clean
-
+# Benchmark the preset
+source  /benchmarking-tool/bench-presets.sh 5
+# Benchmark brahmos
 source /benchmarking-tool/bench-brahmos.sh ${1-1}
-source /benchmarking-tool/bench-presets.sh ${1-1}
+# Publish the results
 source /benchmarking-tool/build-results.sh

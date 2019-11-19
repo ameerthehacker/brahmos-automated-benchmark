@@ -12,14 +12,16 @@ RUN yum localinstall -y /root/chrome.rpm
 
 RUN yum install -y git
 
-# Clone the benchmarking repo into /b
-RUN ["git", "clone", "https://github.com/ameerthehacker/js-framework-benchmark.git", "/benchmarking-tool"]
+# Clone the benchmarking repo into /benchmarking-tool
+RUN git clone https://github.com/ameerthehacker/js-framework-benchmark.git /benchmarking-tool
 
 WORKDIR /benchmarking-tool
 
 # Copy the required scripts
 COPY ./scripts/* ./
 
-# Build benching-tool
-RUN ["sh", "build.sh"]
+# Install netlify cli
+RUN npm install netlify-cli -g
 
+# Build benching-tool
+RUN sh build.sh
