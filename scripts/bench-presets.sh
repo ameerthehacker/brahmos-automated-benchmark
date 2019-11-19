@@ -10,4 +10,5 @@ npm run build-prod
 
 cd /benchmarking-tool/webdriver-ts
 npm run clean
-npm run bench -- keyed/react keyed/preact --headless --count $1
+npm run bench -- keyed/react --headless --count $1
+npm run bench -- keyed/preact --headless --count $1
