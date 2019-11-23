@@ -1,8 +1,8 @@
-source ./start-web-server.sh
+source /benchmarking-util/start-web-server.sh
 
 # Benchmark the preset
-source ./bench-presets.sh ${1-1}
+source /benchmarking-util/bench-presets.sh ${1-1}
 # Benchmark brahmos
-source ./bench-brahmos.sh ${1-1}
+source /benchmarking-util/bench-brahmos.sh ${1-1}
 # Publish the results
-source ./build-results.sh
+source /benchmarking-util/build-results.sh

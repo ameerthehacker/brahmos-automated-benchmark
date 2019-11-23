@@ -1,4 +1,4 @@
-cd $homeDir/benchmarking-tool
+cd /benchmarking-tool
 
-sudo npm install
-sudo npm run install-local
+npm install
+npm run install-local

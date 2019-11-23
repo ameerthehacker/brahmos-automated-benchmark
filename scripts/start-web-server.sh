@@ -1,4 +1,4 @@
-cd ~/benchmarking-tool
+cd /benchmarking-tool
 
 npm start &
 
