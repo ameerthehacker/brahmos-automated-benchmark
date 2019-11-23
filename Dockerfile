@@ -3,12 +3,12 @@ RUN echo "unsafe-perm = true" > /root/.npmrc
 RUN echo "{ \"allow_root\": true }" >  /root/.bowerrc
 
 # Install node
-RUN curl -sL https://rpm.nodesource.com/setup_10.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN yum install -y nodejs
 
 # Install chrome
-RUN curl -sL https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm > /root/chrome.rpm
-RUN yum localinstall -y /root/chrome.rpm
+RUN curl -sL https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.dev > /root/chrome.rpm
+RUN yum localinstall -y /root/chrome.dev
 
 RUN yum install -y git
 
