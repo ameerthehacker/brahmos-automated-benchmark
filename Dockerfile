@@ -29,4 +29,4 @@ RUN sh /benchmarking-util/build.sh
 # Copy all other scripts
 COPY ./scripts/* /benchmarking-util/
 
-ENTRYPOINT [ "sh", "/benchmarking-util/bench.sh" ]
+ENTRYPOINT [ "sh", "/benchmarking-util/bench.sh", "5" ]
