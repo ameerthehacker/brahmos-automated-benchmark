@@ -5,7 +5,7 @@ This repo contains the Dockerfile, scripts for container image which packs all t
 ## Usage
 
 1. Install docker
-2. Build the docker image
+2. Build the container image
 
 ```sh
 sh ./build-image.sh
